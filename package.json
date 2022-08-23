@@ -1,0 +1,17 @@
+{
+  "name": "FamTask",
+  "version": "1.0.0",
+  "description": "backend",
+  "main": "index.js",
+  "author": "amardeepsaha13@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "express": "^4.18.1",
+    "mongoose": "^6.5.2",
+    "nodemon": "^2.0.19"
+  },
+  "scripts": {
+    "serve": "nodemon ./index.js"
+  }
+}

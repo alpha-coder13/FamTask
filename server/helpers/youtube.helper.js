@@ -48,29 +48,7 @@ const VIDEO_FETCHER = async() => {
     return return_data
 }
 
-// const DETAILS_FETCHER= async( id ) => {
-
-//     VALID_KEY()
-
-//     var VIDEOS_URL=`https://www.googleapis.com/youtube/v3/videos?key=${await KEY}&part=snippet&id=${id}&type=video&publishedAfter=${new Date().toISOString()}`
-    
-//     let return_data={}
-
-//     var response= await AXIOS.get(VIDEOS_URL)
-
-//     return_data.DATE = response.data.items[0].snippet.publishedAt
-//     return_data.DETAILS={}
-//     return_data.DETAILS.title = toString(response.data.items[0].snippet.title)
-//     return_data.DETAILS.description = response.data.items[0].snippet.description
-//     return_data.DETAILS.thumbnail = response.data.items[0].snippet.thumbnails.medium
-//     // return_data.TAGS = response.data.items[0].snippet.tags
-
-//     return return_data
-
-// }
-
 module.exports = { 
     VIDEO_FETCHER , 
-    // DETAILS_FETCHER,
     VALID_KEY
 }

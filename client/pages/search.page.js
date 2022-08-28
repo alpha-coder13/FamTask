@@ -3,11 +3,10 @@ const RESULT = async() => {
     var param = document.getElementById('params').value
 
     var param_details = document.getElementById('search_text').value
+
     param_details = encodeURI(param_details)
 
     var response_data = (await fetch (`http://localhost:8000/api/video-search?${param}=${param_details}`, { method : "GET" }))
-
-    console.log(param,param_details)
 
     response_data.json().then( (data) => {
 
@@ -110,6 +109,31 @@ const RESULT = async() => {
 
     } ).catch((err) => {
         console.error(err)
+
+        var error_received = document.createElement('h1')
+        error_received.innerText=`${err}`
+
+        var back_button = document.createElement('button')
+        back_button.id='b_button'
+        back_button.innerText= "Go Back"
+        back_button.style.margin='auto'
+        back_button.style.justifyContent='center'
+        back_button.style.alignItems='center'
+
+        document.getElementById('search_div').appendChild(error_received)
+        document.getElementById('search_div').appendChild(back_button)
+
+        back_button.onclick =() => {
+
+            document.getElementById('search_div').style.display = "none"
+            var myNode = document.getElementById("search_div");
+            while (myNode.firstChild) {
+              myNode.removeChild(myNode.lastChild);
+            }
+            document.getElementById('main_div').style.display="flex"
+        }
+
+        document.getElementById('search_div').appendChild(back_button)
         //empty page
     })
 

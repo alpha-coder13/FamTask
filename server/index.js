@@ -4,7 +4,9 @@ const express = require('express')
 const app=express()
 const cors=require('cors')
 
-DATABASE_POPULATOR()
+DATABASE_POPULATOR() //initial fetcher
+
+setInterval(DATABASE_POPULATOR,120000) // fetches at intervals of every 2  minutes 
 
 app.use(cors())
 

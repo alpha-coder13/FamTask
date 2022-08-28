@@ -115,7 +115,7 @@ Please refer official Docker Docs for detailed procedure and erors faced during 
     - PG - FORMAT ( for formatting pgSQL queries )
 
 ## Database :
--   PostgresQL
+-   PostgreSQL
 
 
 updating ......

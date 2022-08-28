@@ -1,0 +1,35 @@
+.body{
+    margin: 0px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    display: flex;
+   flex-direction: column;
+}
+
+div#main_div {
+   margin: auto;
+   height: auto;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+
+}
+div#search_div {
+    margin: auto;
+    height: auto;
+    width: 100%;
+    display: hidden;
+    flex-direction: column;
+ 
+ }
+div#search_bar {
+    margin: auto;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+ 
+ }
